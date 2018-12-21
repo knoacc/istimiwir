@@ -27,7 +27,7 @@ function getQueryParam(param) {
 var result =  window.location.search.match(new RegExp("(\\?|&)" + param + "(\\[\\])?=([^&]*)")); return result ? result[3] : false;}
 var topVideo = getQueryParam("x");
 var playerElement = document.getElementById("player");
-var player = new Clappr.Player({height: "100%", width: "100%", watermark: "https://4.bp.blogspot.com/-aez4-iK49G8/Wpq6F8OQ6zI/AAAAAAAAATU/PveD14M5E1AXF429itre5qv6RteyEvflwCK4BGAYYCw/s1600/logo.png", size: '300', margin: '500', position: 'bottom-left', top: '-1000px', plugins: {'core': [LevelSelector]}, hlsjsConfig: {xhrSetup: function(xhr, url) {xhr.withCredentials = false;}}, playbackConfig: {crossorigin: 'use-credentials'}}); player.attachTo(playerElement); 
+var player = new Clappr.Player({height: "100%", width: "100%", watermark: "https://dummyimage.com/180x60/000000/fff.png&text=ISTIMIWIR", size: '300', margin: '500', position: 'bottom-left', top: '-1000px', plugins: {'core': [LevelSelector]}, hlsjsConfig: {xhrSetup: function(xhr, url) {xhr.withCredentials = false;}}, playbackConfig: {crossorigin: 'use-credentials'}}); player.attachTo(playerElement); 
 player.load({source: topVideo, mimeType: 'application/x-mpegURL'});
 player.play();
 //]]>
