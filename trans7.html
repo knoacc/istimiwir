@@ -1,0 +1,33 @@
+<style type='text/css'>
+        video {
+  object-fit: fill;
+}
+    body{
+      background-color:black;
+    }
+    #player{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      margin: auto;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  </style>
+  <div id="player-wrapper"></div>
+        <script defer src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
+        <script>
+            window.addEventListener('load', function() {
+                var playerElement = document.getElementById("player-wrapper");
+                var player = new Clappr.Player({
+                    source: 'https://sagahpremium.rumahstreaming.stream/trans7/lives/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjUvMjAxOCAyOjU0OjUyIFBNJmhhc2hfdmFsdWU9TVdkSlF2YkJmb29PanJNSFllaWRpUT09JnZhbGlkbWludXRlcz00NSZpZD01',
+                    baseUrl: 'https://istimiwir.host',
+                    watermark: 'https://repo.istimiwir.host/img/logo.png', size: '300', margin: '500', position: 'bottom-left', top: '-1000px',
+                    height: '100%',
+                    width: '100%',
+                });
+                player.attachTo(playerElement);
+            });
+        </script>
