@@ -116,19 +116,22 @@
 <h2>Stream ISTIMIWIR</h2>
 <style type="text/css"> .resp-container { position: relative; overflow: hidden; padding-top: 56.25%; } .resp-iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; } </style>
 <p>Streaming Liverpool FC vs AFC Bournemouth for FREE.</p>
-<p><button class="btn btn-default" onclick="setStream('/stream/?x=https://neostreamx.azureedge.net/ae44b9e6-27f0-4e4f-a6bc-bfbe8ce96639/225b400d-77f9-4fc8-812a-44162f51705c.ism/Manifest(video,format=m3u8-aapl-v3,audiotrack=audio).m3u8', 'p2')">Channel 1</button>
-<button class="btn btn-default" onclick="setStream('/stream/?x=https://fllivecdn.azureedge.net/60cfd3d0-9e54-457e-8013-75fd1aa7f330/f0b4e281-a72d-449d-a430-88162e8c7494.ism/Manifest(video,format=m3u8-aapl-v3,audiotrack=audio).m3u8', 'p2')">Channel 2</button>
-<button class="btn btn-default" onclick="setStream('/stream/?x=https://thebaldscdn.azureedge.net/3424ea83-ee68-4f20-9a57-028eaf1afdb6/153c8a22-b29d-4749-b27e-03f65cdc722d.ism/Manifest(video,format=m3u8-aapl-v3,audiotrack=audio).m3u8', 'p2')">Channel 3</button></p>
+<p><button class="btn btn-default" onclick="setStream('/stream/?x=https://neostreamx.azureedge.net/ae44b9e6-27f0-4e4f-a6bc-bfbe8ce96639/225b400d-77f9-4fc8-812a-44162f51705c.ism/Manifest(video,format=m3u8-aapl-v3,audiotrack=audio).m3u8')">Channel 1</button>
+<button class="btn btn-default" onclick="setStream('/stream/?x=https://fllivecdn.azureedge.net/60cfd3d0-9e54-457e-8013-75fd1aa7f330/f0b4e281-a72d-449d-a430-88162e8c7494.ism/Manifest(video,format=m3u8-aapl-v3,audiotrack=audio).m3u8')">Channel 2</button>
+<button class="btn btn-default" onclick="setStream('/stream/?x=https://thebaldscdn.azureedge.net/3424ea83-ee68-4f20-9a57-028eaf1afdb6/153c8a22-b29d-4749-b27e-03f65cdc722d.ism/Manifest(video,format=m3u8-aapl-v3,audiotrack=audio).m3u8')">Channel 3</button></p>
 <div class="resp-container">
 <iframe class="resp-iframe" gesture="media" allow="encrypted-media" class="resp-container" src="/stream/?x=https://thebaldscdn.azureedge.net/3424ea83-ee68-4f20-9a57-028eaf1afdb6/153c8a22-b29d-4749-b27e-03f65cdc722d.ism/Manifest(video,format=m3u8-aapl-v3,audiotrack=audio).m3u8"></iframe></div>
 </div>
 </div>
 </div>
 <script>
-  function setStream(url, p){
+function refresh()
+ {
+	var x=document.getElementById("iframe").src;
+	document.getElementById("iframe").src=x;
+  }
+function setStream(url){
     document.getElementById('iframe').src = url;
-    $('.livep').hide();
-	$('#'+p).show();
 }
 </script>
 </section>
