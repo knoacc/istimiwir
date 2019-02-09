@@ -27,12 +27,10 @@ function getQueryParam(param) {
 var result =  window.location.search.match(new RegExp("(\\?|&)" + param + "(\\[\\])?=([^&]*)")); return result ? result[3] : false;}
 var topVideo = getQueryParam("x");
 var playerElement = document.getElementById("player");
-var player = new Clappr.Player({height: "100%", width: "100%", watermark: "https://repo.istimiwir.host/img/logo.png", watermarkLink: "http://example.net/", size: '320', margin: '500', position: 'top-right', top: '-1000px', plugins: {'core': [LevelSelector]}, hlsjsConfig: {xhrSetup: function(xhr, url) {xhr.withCredentials = false;}}, playbackConfig: {crossorigin: 'use-credentials'}}); player.attachTo(playerElement); 
+var player = new Clappr.Player({height: "100%", width: "100%", watermark: "../icon/android-chrome-512x512.png", size: '512', margin: '512', position: 'bottom-right', top: '-1000px', plugins: {'core': [LevelSelector]}, hlsjsConfig: {xhrSetup: function(xhr, url) {xhr.withCredentials = false;}}, playbackConfig: {crossorigin: 'use-credentials'}}); player.attachTo(playerElement); 
 player.load({source: topVideo, mimeType: 'application/x-mpegURL'});
-player.play();
 //]]>
 </script>
-
 <script>
   // Show loading animation.
   var playPromise = Clappr.Player();
