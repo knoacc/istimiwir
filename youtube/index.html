@@ -32,8 +32,6 @@ var topVideo = getQueryParam("id");
 var playerElement = document.getElementById("player");
 var player = new Clappr.Player({
   source: topVideo,
-  watermark: "https://repo.istimiwir.host/img/logo.png",
-  watermarkLink: 'https://blog.istimiwir.host', position: 'top-right',
   poster: 'https://i.ytimg.com/vi/'+topVideo+'/hqdefault.jpg',
   height: 360,
   width: 640,
@@ -41,20 +39,5 @@ var player = new Clappr.Player({
   YoutubeVars : {"languageCode":"id"}
 });
 player.attachTo(playerElement); 
-player.load({source: topVideo});
 //]]>
 </script>
-<script>
-  // Show loading animation.
-  var playPromise = Clappr.Player();
-
-  if (playPromise !== undefined) {
-    playPromise.then(_ => {
-      // Automatic playback started!
-      // Show playing UI.
-    })
-    .catch(error => {
-      // Auto-play was prevented
-      // Show paused UI.
-    });
-  </script>
