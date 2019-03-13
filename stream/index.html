@@ -30,7 +30,7 @@ function getQueryParam(param) {
 var result =  window.location.search.match(new RegExp("(\\?|&)" + param + "(\\[\\])?=([^&]*)")); return result ? result[3] : false;}
 var topVideo = getQueryParam("x");
 var playerElement = document.getElementById("player");
-var player = new Clappr.Player({height: "100%", width: "100%", watermark: "https://repo.istimiwir.host/img/logo.png", watermarkLink: 'https://blog.istimiwir.host', size: '512', margin: '512', position: 'top-left', mediacontrol: {seekbar: "#000000", buttons: "#000000"}, plugins: {'core': [LevelSelector]}, hlsjsConfig: {xhrSetup: function(xhr, url) {xhr.withCredentials = false;}}, playbackConfig: {crossorigin: 'use-credentials'}}); player.attachTo(playerElement); 
+var player = new Clappr.Player({height: "100%", width: "100%", watermark: "https://repo.istimiwir.host/img/logo.png", watermarkLink: 'https://blog.istimiwir.host', size: '512', margin: '512', position: 'bottom-left', mediacontrol: {seekbar: "#000000", buttons: "#000000"}, plugins: {'core': [LevelSelector]}, hlsjsConfig: {xhrSetup: function(xhr, url) {xhr.withCredentials = false;}}, playbackConfig: {crossorigin: 'use-credentials'}}); player.attachTo(playerElement); 
 player.load({source: topVideo, mimeType: 'application/x-mpegURL'});
 player.play();
 //]]>
