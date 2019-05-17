@@ -15,9 +15,8 @@ permalink: /player
 .closebtn { margin-left: 15px; color: white; font-weight: bold; float: right; font-size: 22px; line-height: 20px; cursor: pointer; transition: 0.3s;}
 .closebtn:hover { color: black;}</style>
 <script>
-function getQueryVariable(e){for(var r=window.location.search.substring(1),t=r.split("&"),n=0;n<t.length;n++){var a=t[n].split("=");if(a[0]==e)return a[1]}return!1}window.onload=function(){var klik=e=getQueryVariable("slug"),x="https://id.terafile.net/"+e;
-document.getElementById(my_video).documentWrite("<source src="+x+" type="video/mp4" title="">
-";};
+function getQueryVariable(e){for(var r=window.location.search.substring(1),t=r.split("&"),n=0;n<t.length;n++){var a=t[n].split("=");if(a[0]==e)return a[1]}return!1}window.onload=function(){var klik=e=getQueryVariable("slug"),x="src='https://id.terafile.net/'"+e;
+document.getElementById(my_video).documentWrite("<source ",x," type="video/mp4" title=",e,">";};
 </script>
 <script defer="defer" src="https://vjs.zencdn.net/5.4.4/video.min.js"></script>
 <script defer="defer" type="text/javascript" src="https://terafile.net/videojs_5.vast.vpaid.min.js"></script>
